@@ -1,4 +1,4 @@
-// LoginPage.js
+'use client';
 import { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 
@@ -25,3 +25,5 @@ const LoginPage = () => {
     </form>
   );
 };
+
+export default LoginPage;
