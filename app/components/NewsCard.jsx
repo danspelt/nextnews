@@ -1,7 +1,25 @@
+import Image from "next/image";
 const NewsCard = ({ article }) => {
+  
     return (
-      <div className="max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={article.imageUrl} alt="Article Image" />
+      <div className="max-w-sm card p-4 bg-gray-100 overflow-hidden shadow-lg">
+        {article.urlToImage ? (
+          <Image
+            src={article.urlToImage}
+            alt={article.title}
+            width={300}
+            height={200}
+            className="w-full"
+          />
+        ) : (
+          <Image
+            src="/news-placeholder.webp"
+            alt="Placeholder"
+            width={300}
+            height={200}
+            className="w-full" 
+          />
+        )}
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{article.title}</div>
           <p className="text-gray-700 text-base">{article.summary}</p>
