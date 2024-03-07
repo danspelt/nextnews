@@ -5,7 +5,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center my-8">NextNews</h1>
+      <h1 className="text-3xl font-bold text-center my-8">PrimePulse</h1>
       <p className="text-center mb-4">Your go-to source for the latest news articles</p>
       <div className="container mx-auto px-4">
         {news ? (
